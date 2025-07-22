@@ -115,7 +115,9 @@
 </head>
 <body>
   <div class="text-end p-3">
-    <button class="btn btn-sm btn-outline-secondary" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    <button id="darkModeToggle" class="btn btn-sm btn-outline-secondary" onclick="toggleDarkMode()">
+      <i id="darkModeIcon" class="fas fa-moon"></i>
+    </button>
   </div>
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -204,29 +206,22 @@
       </div>
     </div>
   </section>
+  
   <!-- EXPERIENCE -->
   <section id="experience">
     <div class="container">
       <h2 class="text-center">Experience</h2>
   
       <div class="project">
-        <h3>Tugas Akhir (Sentiment Analysis)</h3>
-        <p>Analisis sentimen penggunaan e-learning Sunan UMK menggunakan Python, scikit-learn, dan XAMPP.</p>
+        <h3>MSIB – AI for Jobs Program, PT Orbit Ventura Indonesia</h3>
+        <p><strong>March – July 2024</strong></p>
+        <p>Participated in the Kampus Merdeka internship program, focusing on machine learning fundamentals and their real-world application. I served as a team leader in a final project team, collaborating to develop an AI-based solution using supervised learning techniques, model deployment, and presentation skills.</p>
       </div>
   
       <div class="project">
-        <h3>Mobile App: Sistem Penjualan Kopi</h3>
-        <p>Proyek akhir kuliah menggunakan Visual Studio Code, terhubung ke database MySQL.</p>
-      </div>
-  
-      <div class="project">
-        <h3>MSIB – AI for Jobs, PT. Orbit Ventura</h3>
-        <p>Implementasi machine learning untuk aplikasi sederhana. Bertugas sebagai team leader.</p>
-      </div>
-  
-      <div class="project">
-        <h3>UKM Jurnalistik – Universitas Muria Kudus</h3>
-        <p>Kepala Divisi Pusat Data & Divisi Kaderisasi. Bertugas mengelola dokumentasi dan pelatihan fotografi.</p>
+        <h3>Journalism Student Organization – Universitas Muria Kudus</h3>
+        <p><strong>August 2022 – December 2023</strong></p>
+        <p>Served as Head of the Data Center and Cadre Division. My responsibilities included managing organizational data archives, coordinating internal training in photojournalism and public communication, and organizing recruitment events for new members.</p>
       </div>
     </div>
   </section>
@@ -335,6 +330,24 @@
   <script>
     function toggleDarkMode() {
       document.body.classList.toggle("dark-mode");
+  
+      // Toggle semua section & header/footer
+      const sections = document.querySelectorAll("section, header, footer");
+      sections.forEach(el => el.classList.toggle("dark-mode"));
+  
+      // Toggle teks dan link
+      const links = document.querySelectorAll("a");
+      links.forEach(link => link.classList.toggle("text-light"));
+  
+      // Ganti ikon
+      const icon = document.getElementById("darkModeIcon");
+      if (document.body.classList.contains("dark-mode")) {
+        icon.classList.remove("fa-moon");
+        icon.classList.add("fa-sun");
+      } else {
+        icon.classList.remove("fa-sun");
+        icon.classList.add("fa-moon");
+      }
     }
   </script>
 </body>
