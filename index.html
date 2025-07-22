@@ -114,11 +114,6 @@
   </style>
 </head>
 <body>
-  <div class="text-end p-3">
-    <button id="darkModeToggle" class="btn btn-sm btn-outline-secondary" onclick="toggleDarkMode()">
-      <i id="darkModeIcon" class="fas fa-moon"></i>
-    </button>
-  </div>
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container">
@@ -214,13 +209,13 @@
   
       <div class="project">
         <h3>MSIB – AI for Jobs Program, PT Orbit Ventura Indonesia</h3>
-        <p><strong>March – July 2024</strong></p>
+        <p><strong>August – December 2023</strong></p>
         <p>Participated in the Kampus Merdeka internship program, focusing on machine learning fundamentals and their real-world application. I served as a team leader in a final project team, collaborating to develop an AI-based solution using supervised learning techniques, model deployment, and presentation skills.</p>
       </div>
   
       <div class="project">
         <h3>Journalism Student Organization – Universitas Muria Kudus</h3>
-        <p><strong>August 2022 – December 2023</strong></p>
+        <p><strong>January 2023 – December 2023 & January 2024 – December 2024</strong></p>
         <p>Served as Head of the Data Center and Cadre Division. My responsibilities included managing organizational data archives, coordinating internal training in photojournalism and public communication, and organizing recruitment events for new members.</p>
       </div>
     </div>
@@ -327,28 +322,5 @@
 
   <!-- BOOTSTRAP JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    function toggleDarkMode() {
-      document.body.classList.toggle("dark-mode");
-  
-      // Toggle semua section & header/footer
-      const sections = document.querySelectorAll("section, header, footer");
-      sections.forEach(el => el.classList.toggle("dark-mode"));
-  
-      // Toggle teks dan link
-      const links = document.querySelectorAll("a");
-      links.forEach(link => link.classList.toggle("text-light"));
-  
-      // Ganti ikon
-      const icon = document.getElementById("darkModeIcon");
-      if (document.body.classList.contains("dark-mode")) {
-        icon.classList.remove("fa-moon");
-        icon.classList.add("fa-sun");
-      } else {
-        icon.classList.remove("fa-sun");
-        icon.classList.add("fa-moon");
-      }
-    }
-  </script>
 </body>
 </html>
