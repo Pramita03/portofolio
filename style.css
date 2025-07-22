@@ -5,6 +5,32 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  position: relative;
+}
+
+/* Background Blob Dekoratif */
+body::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  right: -150px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle at center, #c3aed6, transparent 70%);
+  filter: blur(80px);
+  z-index: -1;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  bottom: -100px;
+  left: -150px;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle at center, #b8c5f2, transparent 70%);
+  filter: blur(80px);
+  z-index: -1;
 }
 
 /* Header */
@@ -24,10 +50,16 @@ header::after {
   left: -100px;
   width: 300px;
   height: 300px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.08);
   border-radius: 50%;
   z-index: 0;
-  filter: blur(50px);
+  filter: blur(80px);
+  animation: float 8s ease-in-out infinite alternate;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(30px); }
 }
 
 header h1,
@@ -49,12 +81,39 @@ header p {
 /* Sections */
 section {
   padding: 60px 20px;
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(255, 255, 255, 0.9);
   margin: 30px auto;
   border-radius: 16px;
   max-width: 1000px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   backdrop-filter: blur(8px);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Section decoration */
+section::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 120px;
+  height: 120px;
+  background: rgba(133, 150, 255, 0.1);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+section::after {
+  content: "";
+  position: absolute;
+  bottom: -40px;
+  left: -40px;
+  width: 100px;
+  height: 100px;
+  background: rgba(240, 179, 255, 0.1);
+  border-radius: 50%;
+  z-index: 0;
 }
 
 /* Titles */
@@ -62,6 +121,8 @@ h2 {
   color: #5a67d8;
   margin-bottom: 30px;
   font-weight: 700;
+  position: relative;
+  z-index: 1;
 }
 
 /* Project Card */
@@ -72,6 +133,8 @@ h2 {
   margin-bottom: 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-left: 5px solid #5a67d8;
+  position: relative;
+  z-index: 1;
 }
 
 .project:hover {
@@ -86,13 +149,18 @@ h2 {
 
 /* Profile */
 .profile-img {
-  width: 220px;
-  height: 220px;
+  width: 240px;
+  height: 240px;
   object-fit: cover;
   border-radius: 50%;
   border: 6px solid #5a67d8;
   box-shadow: 0 4px 20px rgba(90, 103, 216, 0.2);
   margin-bottom: 25px;
+  transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+  transform: scale(1.03);
 }
 
 /* Links & Buttons */
@@ -120,6 +188,8 @@ a:hover {
 
 .btn-social:hover {
   transform: scale(1.1);
+  background-color: #5a67d8;
+  border-color: #5a67d8;
 }
 
 /* Footer */
