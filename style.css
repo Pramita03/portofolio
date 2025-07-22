@@ -9,28 +9,26 @@ body {
 }
 
 /* Background Blob Dekoratif */
-body::before {
+body::before,
+body::after {
   content: "";
   position: absolute;
+  filter: blur(80px);
+  z-index: -1;
+}
+body::before {
   top: -100px;
   right: -150px;
   width: 300px;
   height: 300px;
   background: radial-gradient(circle at center, #c3aed6, transparent 70%);
-  filter: blur(80px);
-  z-index: -1;
 }
-
 body::after {
-  content: "";
-  position: absolute;
   bottom: -100px;
   left: -150px;
   width: 250px;
   height: 250px;
   background: radial-gradient(circle at center, #b8c5f2, transparent 70%);
-  filter: blur(80px);
-  z-index: -1;
 }
 
 /* Header */
@@ -42,7 +40,6 @@ header {
   text-align: center;
   overflow: hidden;
 }
-
 header::after {
   content: "";
   position: absolute;
@@ -56,29 +53,24 @@ header::after {
   filter: blur(80px);
   animation: float 8s ease-in-out infinite alternate;
 }
-
 @keyframes float {
   0% { transform: translateY(0); }
   100% { transform: translateY(30px); }
 }
-
-header h1,
-header p {
+header h1, header p {
   position: relative;
   z-index: 1;
 }
-
 header h1 {
   font-size: 3em;
   margin-bottom: 10px;
 }
-
 header p {
   font-size: 1.25em;
   color: #f3f3f3;
 }
 
-/* Sections */
+/* Section */
 section {
   padding: 60px 20px;
   background-color: rgba(255, 255, 255, 0.9);
@@ -90,30 +82,25 @@ section {
   position: relative;
   overflow: hidden;
 }
-
-/* Section decoration */
-section::before {
+section::before, section::after {
   content: "";
   position: absolute;
+  border-radius: 50%;
+  z-index: 0;
+}
+section::before {
   top: -40px;
   right: -40px;
   width: 120px;
   height: 120px;
   background: rgba(133, 150, 255, 0.1);
-  border-radius: 50%;
-  z-index: 0;
 }
-
 section::after {
-  content: "";
-  position: absolute;
   bottom: -40px;
   left: -40px;
   width: 100px;
   height: 100px;
   background: rgba(240, 179, 255, 0.1);
-  border-radius: 50%;
-  z-index: 0;
 }
 
 /* Titles */
@@ -136,18 +123,16 @@ h2 {
   position: relative;
   z-index: 1;
 }
-
 .project:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(90, 103, 216, 0.2);
 }
-
 .project h3 {
   color: #434190;
   margin-top: 0;
 }
 
-/* Profile */
+/* Profile Image */
 .profile-img {
   width: 240px;
   height: 240px;
@@ -158,40 +143,34 @@ h2 {
   margin-bottom: 25px;
   transition: transform 0.3s ease;
 }
-
 .profile-img:hover {
   transform: scale(1.03);
 }
 
-/* Links & Buttons */
+/* Links */
 a {
   color: #5a67d8;
   text-decoration: none;
 }
-
 a:hover {
   color: #434190;
   text-decoration: underline;
 }
 
-/* Carousel Controls - Ikon Kiri */
-.carousel-control-prev-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='black' viewBox='0 0 8 8'%3E%3Cpath d='M4.854 1.146a.5.5 0 0 1 0 .708L2.707 4l2.147 2.146a.5.5 0 0 1-.708.708l-2.5-2.5a.5.5 0 0 1 0-.708l2.5-2.5a.5.5 0 0 1 .708 0z'/%3E%3C/svg%3E");
-  background-size: 100% 100%;
-  width: 2rem;
-  height: 2rem;
-  opacity: 1;
-}
-
-/* Carousel Controls - Ikon Kanan */
+/* Carousel Icons */
+.carousel-control-prev-icon,
 .carousel-control-next-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='black' viewBox='0 0 8 8'%3E%3Cpath d='M3.146 1.146a.5.5 0 0 1 .708 0l2.5 2.5a.5.5 0 0 1 0 .708l-2.5 2.5a.5.5 0 1 1-.708-.708L5.293 4 3.146 1.854a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
   background-size: 100% 100%;
   width: 2rem;
   height: 2rem;
   opacity: 1;
 }
-
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='black' viewBox='0 0 8 8'%3E%3Cpath d='M4.854 1.146a.5.5 0 0 1 0 .708L2.707 4l2.147 2.146a.5.5 0 0 1-.708.708l-2.5-2.5a.5.5 0 0 1 0-.708l2.5-2.5a.5.5 0 0 1 .708 0z'/%3E%3C/svg%3E");
+}
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='black' viewBox='0 0 8 8'%3E%3Cpath d='M3.146 1.146a.5.5 0 0 1 .708 0l2.5 2.5a.5.5 0 0 1 0 .708l-2.5 2.5a.5.5 0 1 1-.708-.708L5.293 4 3.146 1.854a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+}
 
 /* Social Buttons */
 .btn-social {
@@ -204,32 +183,63 @@ a:hover {
   text-align: center;
   transition: all 0.3s ease;
 }
-
 .btn-social:hover {
   transform: scale(1.1);
   background-color: #5a67d8;
   border-color: #5a67d8;
 }
-.dark-mode {
-  background-color: #1a202c !important;
-  color: #edf2f7 !important;
-}
 
-.dark-mode section {
-  background-color: #2d3748 !important;
-  color: #edf2f7 !important;
+/* Dark Mode Button (☀/🌙) */
+#darkModeToggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 999;
+  background-color: #edf2f7;
+  color: #1a202c;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.1rem;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
-
-.dark-mode header {
-  background: linear-gradient(135deg, #2b6cb0, #2c5282);
+#darkModeToggle:hover {
+  background-color: #e2e8f0;
 }
-
-.dark-mode footer {
+.dark-mode #darkModeToggle {
   background-color: #2d3748;
   color: #edf2f7;
 }
 
+/* Dark Mode Styles */
+.dark-mode {
+  background-color: #1a202c !important;
+  color: #edf2f7 !important;
+}
+.dark-mode section {
+  background-color: #2d3748 !important;
+  color: #edf2f7 !important;
+}
+.dark-mode header {
+  background: linear-gradient(135deg, #2b6cb0, #2c5282);
+}
+.dark-mode footer {
+  background-color: #2d3748;
+  color: #edf2f7;
+}
 .dark-mode a {
+  color: #90cdf4 !important;
+}
+.dark-mode a:hover {
+  color: #63b3ed !important;
+}
+.dark-mode .project {
+  background-color: #3a4458 !important;
+  border-left-color: #90cdf4 !important;
+}
+.dark-mode .project h3 {
   color: #90cdf4 !important;
 }
 
@@ -239,21 +249,16 @@ footer {
   color: #fff;
   padding: 50px 20px;
 }
-
 footer h4 {
   font-weight: 600;
-  color: #fff;
   margin-bottom: 20px;
 }
-
 footer a {
   color: #fff;
 }
-
 footer a:hover {
   color: #90cdf4;
 }
-
 footer .copyright {
   font-size: 0.9em;
   margin-top: 30px;
