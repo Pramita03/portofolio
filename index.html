@@ -6,6 +6,95 @@
   <title>Alvina Gusti Pramita | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f4f7fb;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(135deg, #90cdf4, #1e90ff);
+      color: white;
+      padding: 70px 20px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-size: 2.8em;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2em;
+    }
+
+    section {
+      padding: 60px 20px;
+      background-color: white;
+      margin-bottom: 30px;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+    }
+
+    h2 {
+      color: #1e90ff;
+      margin-bottom: 30px;
+      font-weight: 600;
+    }
+
+    .project {
+      background-color: #e9f4ff;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      border-left: 5px solid #1e90ff;
+    }
+
+    .project h3 {
+      color: #0b60a3;
+      margin-top: 0;
+    }
+
+    a {
+      color: #1e90ff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background-color: #e2e8f0;
+      padding: 20px;
+      text-align: center;
+      font-size: 0.9em;
+      border-top: 1px solid #ccc;
+    }
+
+    /* Foto profil */
+    .profile-img {
+      width: 220px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid #1e90ff;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      margin-bottom: 25px;
+    }
+
+    /* Ikon kontak */
+    .contact-icons img {
+      filter: grayscale(100%);
+      transition: all 0.3s ease;
+    }
+
+    .contact-icons img:hover {
+      filter: grayscale(0%);
+      transform: scale(1.1);
+    }
+  </style>
 </head>
 <body>
 
@@ -42,14 +131,10 @@
   </header>
 
   <!-- ABOUT -->
-  <section id="about">
-    <div class="container text-center">
-      <!-- FOTO PROFIL -->
-      <img src="foto-alvina.JPG" 
-           class="rounded-circle img-fluid shadow mb-4" 
-           alt="Foto Alvina" 
-           style="width: 220px; height: 220px; object-fit: cover; border: 6px solid #1e90ff;">
-      
+  <section id="about" class="text-center">
+    <div class="container">
+      <img src="assets/foto-alvina.JPG" class="profile-img" alt="Foto Alvina"
+           onerror="this.src='https://via.placeholder.com/220x220.png?text=Foto+Alvina';">
       <h2>About Me</h2>
       <p>
         I’m a recent graduate in Information Systems from Universitas Muria Kudus with a strong interest in IT, 
@@ -94,18 +179,18 @@
   <section id="contact">
     <div class="container text-center">
       <h2>Contact</h2>
-      <div class="d-flex justify-content-center gap-4 flex-wrap mt-4">
+      <div class="d-flex justify-content-center gap-4 flex-wrap mt-4 contact-icons">
         <a href="mailto:pramitaalvina25@gmail.com" target="_blank" title="Email">
-          <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" width="40">
+          <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Email" width="36">
         </a>
         <a href="https://www.linkedin.com/in/alvina-pramita-907492240/" target="_blank" title="LinkedIn">
-          <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" width="40">
+          <img src="https://cdn-icons-png.flaticon.com/512/1384/1384014.png" alt="LinkedIn" width="36">
         </a>
-        <a href="https://www.instagram.com/USERNAME_KAMU" target="_blank" title="Instagram">
-          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" width="40">
+        <a href="https://www.instagram.com/alvina_pramm" target="_blank" title="Instagram">
+          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111465.png" alt="Instagram" width="36">
         </a>
-        <a href="https://wa.me/62xxxxxxxxxxx" target="_blank" title="WhatsApp">
-          <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" width="40">
+        <a href="https://wa.me/6285712544043" target="_blank" title="WhatsApp">
+          <img src="https://cdn-icons-png.flaticon.com/512/3670/3670051.png" alt="WhatsApp" width="36">
         </a>
       </div>
     </div>
@@ -114,7 +199,7 @@
   <!-- FOOTER -->
   <footer>
     <div class="container text-center">
-      <p>© Alvina Gusti Pramita</p>
+      <p>© Create by Alvina Gusti Pramita</p>
     </div>
   </footer>
 
