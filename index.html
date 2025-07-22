@@ -6,6 +6,8 @@
   <title>Alvina Gusti Pramita | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
   <style>
     body {
       background-color: #f4f7fb;
@@ -65,15 +67,6 @@
       text-decoration: underline;
     }
 
-    footer {
-      background-color: #e2e8f0;
-      padding: 20px;
-      text-align: center;
-      font-size: 0.9em;
-      border-top: 1px solid #ccc;
-    }
-
-    /* Foto profil */
     .profile-img {
       width: 220px;
       height: 220px;
@@ -84,15 +77,39 @@
       margin-bottom: 25px;
     }
 
-    /* Ikon kontak */
-    .contact-icons img {
-      filter: grayscale(100%);
-      transition: all 0.3s ease;
+    .btn-social {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      padding: 0;
+      font-size: 1.25rem;
+      line-height: 44px;
+      text-align: center;
     }
 
-    .contact-icons img:hover {
-      filter: grayscale(0%);
-      transform: scale(1.1);
+    footer {
+      background-color: #1e293b;
+      color: #fff;
+      padding: 40px 20px;
+    }
+
+    footer h4 {
+      color: #fff;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    footer a {
+      color: #fff;
+    }
+
+    footer a:hover {
+      color: #90cdf4;
+    }
+
+    footer .copyright {
+      font-size: 0.9em;
+      margin-top: 30px;
     }
   </style>
 </head>
@@ -179,27 +196,33 @@
   <section id="contact">
     <div class="container text-center">
       <h2>Contact</h2>
-      <div class="d-flex justify-content-center gap-4 flex-wrap mt-4 contact-icons">
-        <a href="mailto:pramitaalvina25@gmail.com" target="_blank" title="Email">
-          <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Email" width="36">
-        </a>
-        <a href="https://www.linkedin.com/in/alvina-pramita-907492240/" target="_blank" title="LinkedIn">
-          <img src="https://cdn-icons-png.flaticon.com/512/1384/1384014.png" alt="LinkedIn" width="36">
-        </a>
-        <a href="https://www.instagram.com/alvina_pramm" target="_blank" title="Instagram">
-          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111465.png" alt="Instagram" width="36">
-        </a>
-        <a href="https://wa.me/6285712544043" target="_blank" title="WhatsApp">
-          <img src="https://cdn-icons-png.flaticon.com/512/3670/3670051.png" alt="WhatsApp" width="36">
-        </a>
-      </div>
+      <p>You can reach me through the following platforms:</p>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer>
     <div class="container text-center">
-      <p>© Create by Alvina Gusti Pramita</p>
+      <div class="row justify-content-center">
+        <div class="col-lg-4 mb-4">
+          <h4>SOSIAL MEDIA</h4>
+          <a class="btn btn-outline-light btn-social mx-1" href="mailto:pramitaalvina25@gmail.com" target="_blank">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/in/alvina-pramita-907492240/" target="_blank">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a class="btn btn-outline-light btn-social mx-1" href="https://instagram.com/alvina_pramm" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a class="btn btn-outline-light btn-social mx-1" href="https://wa.me/6285712544043" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+      <div class="copyright mt-4">
+        <p>© 2025 Alvina Gusti Pramita. All rights reserved.</p>
+      </div>
     </div>
   </footer>
 
