@@ -1,65 +1,149 @@
 body {
-  margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background-color: #f9f9f9;
+  background: linear-gradient(to bottom, #f5f7fa 0%, #e3eafc 100%);
   color: #333;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
-/* Tidak perlu override .container karena Bootstrap sudah menangani */
+/* Header */
 header {
-  background-color: #1e90ff;
+  background: linear-gradient(135deg, #667eea, #764ba2);
   color: white;
-  padding: 60px 20px;
+  padding: 90px 20px;
+  position: relative;
   text-align: center;
+  overflow: hidden;
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: -100px;
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  z-index: 0;
+  filter: blur(50px);
+}
+
+header h1,
+header p {
+  position: relative;
+  z-index: 1;
 }
 
 header h1 {
-  margin: 0;
-  font-size: 2.5em;
+  font-size: 3em;
+  margin-bottom: 10px;
 }
 
 header p {
-  font-size: 1.2em;
-  margin-top: 10px;
+  font-size: 1.25em;
+  color: #f3f3f3;
 }
 
+/* Sections */
 section {
   padding: 60px 20px;
-  border-bottom: 1px solid #ddd;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.85);
+  margin: 30px auto;
+  border-radius: 16px;
+  max-width: 1000px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(8px);
 }
 
+/* Titles */
 h2 {
-  font-size: 2em;
-  color: #1e90ff;
+  color: #5a67d8;
   margin-bottom: 30px;
+  font-weight: 700;
 }
 
+/* Project Card */
 .project {
-  background-color: #f0f8ff;
-  padding: 20px;
-  border-radius: 8px;
+  background-color: #edf2ff;
+  padding: 25px;
+  border-radius: 12px;
   margin-bottom: 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-left: 5px solid #5a67d8;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(90, 103, 216, 0.2);
 }
 
 .project h3 {
+  color: #434190;
   margin-top: 0;
-  color: #0b60a3;
 }
 
+/* Profile */
+.profile-img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid #5a67d8;
+  box-shadow: 0 4px 20px rgba(90, 103, 216, 0.2);
+  margin-bottom: 25px;
+}
+
+/* Links & Buttons */
 a {
-  color: #1e90ff;
+  color: #5a67d8;
   text-decoration: none;
 }
 
 a:hover {
+  color: #434190;
   text-decoration: underline;
 }
 
-footer {
+/* Social Buttons */
+.btn-social {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  padding: 0;
+  font-size: 1.25rem;
+  line-height: 44px;
   text-align: center;
-  padding: 20px;
-  background-color: #eee;
+  transition: all 0.3s ease;
+}
+
+.btn-social:hover {
+  transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+  background: #2d3748;
+  color: #fff;
+  padding: 50px 20px;
+}
+
+footer h4 {
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+footer a {
+  color: #fff;
+}
+
+footer a:hover {
+  color: #90cdf4;
+}
+
+footer .copyright {
   font-size: 0.9em;
+  margin-top: 30px;
 }
